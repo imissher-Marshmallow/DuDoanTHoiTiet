@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trợ Lý thông minh</title>
+        <link rel="stylesheet" href="giaodien.css" />
+        <!-- Liên kết đến CSS chung -->
+        <style>
+            .container-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 300px;
+                gap: 2rem;
+                max-width: 1000px;
+                margin: 4rem auto;
+                padding: 0 2rem;
+            }
+
+            .chat-container {
+                background: var(--glass-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid var(--glass-border);
+                border-radius: 20px;
+                box-shadow: var(--shadow);
+                padding: 2rem;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .water-status-panel {
+                background: var(--glass-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid var(--glass-border);
+                border-radius: 20px;
+                box-shadow: var(--shadow);
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .status-item {
+                border-bottom: 1px solid var(--glass-border);
+                padding: 1rem 0;
+            }
+
+            .status-item:last-child {
+                border-bottom: none;
+            }
+
+            .status-label {
+                font-size: 0.85rem;
+                color: var(--neutral-light);
+                font-weight: 500;
+            }
+
+            .status-value {
+                font-size: 1.4rem;
+                color: var(--accent-color);
+                font-weight: bold;
+                margin-top: 0.3rem;
+            }
+
+            .status-value.normal {
+                color: #4ade80;
+            }
+
+            .status-value.warning {
+                color: #fbbf24;
+            }
+
+            .status-value.danger {
+                color: #ef4444;
+            }
+
+            .chat-messages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .message {
+                max-width: 90%;
+                padding: 1rem;
+                border-radius: 15px;
+                position: relative;
+                animation: fadeInUp 0.5s ease-out;
+            }
+
+            .user-message {
+                background: linear-gradient(
+                    45deg,
+                    var(--accent-color),
+                    #ffb347
+                );
+                color: black;
+                align-self: flex-end;
+            }
+
+            .ai-message {
+                background: var(--neutral-light);
+                color: var(--neutral-dark);
+                align-self: flex-start;
+            }
+
+            .chat-input {
+                display: flex;
+                gap: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--glass-border);
+            }
+
+            .chat-input input {
+                flex: 1;
+                padding: 1rem;
+                border: 1px solid var(--glass-border);
+                border-radius: 25px;
+                background: var(--glass-bg);
+                color: var(--text-color);
+                font-size: 1rem;
+            }
+
+            .chat-input button {
+                padding: 1rem 2rem;
+                background: linear-gradient(
+                    45deg,
+                    var(--primary-color),
+                    var(--secondary-color)
+                );
+                color: black;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+            .chat-input button:hover {
+                transform: scale(1.05);
+                box-shadow: var(--shadow-hover);
+            }
+
+            @media (max-width: 768px) {
+                .container-wrapper {
+                    grid-template-columns: 1fr;
+                }
+
+                .chat-container {
+                    height: 400px;
+                }
+            }
+
+            .refresh-btn {
+                padding: 0.5rem 1rem;
+                background: var(--accent-color);
+                color: black;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 0.85rem;
+                font-weight: 600;
+            }
+
+            .refresh-btn:hover {
+                opacity: 0.9;
+            }
+
+            .loading {
+                color: var(--neutral-light);
+                font-size: 0.85rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">CẢNH BÁO LŨ LỤT</div>
+                <div class="nav-links">
+                    <a href="index.html#home">Trang chủ</a>
+                    <a href="index.html#about">Giới thiệu</a>
+                    <a href="index.html#vechungtoi">Về Chúng Tôi</a>
+                    <div class="dropdown">
+                        <span class="dropbtn">About⬇</span>
+                        <div class="dropdown-content">
+                            <a href="ai-assistant.html">Trợ lý AI</a>
+                            <a href="lienhe.html">Giúp đỡ</a>
+                            <a href="lienhe.html">Báo lỗi</a>
+                        </div>
+                    </div>
+                    <a href="index.html#ranking">Xếp hạng</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="login">Đăng nhập</button>
+                    <button class="register">Đăng ký</button>
+                    <button class="notification">Thông báo🔔</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-wrapper">
+            <section class="chat-container">
+                <h2 style="text-align: center; color: black; margin-bottom: 2rem">
+                    Trợ Lý AI - Hỏi Đáp Về Lũ Lụt
+                </h2>
+                <div class="chat-messages">
+                    <div class="ai-message message">
+                        Xin chào! Tôi là trợ lý AI. Bạn có câu hỏi gì về cảnh báo lũ
+                        lụt? Tôi có thể trả lời các câu hỏi về mực nước hiện tại, dự báo
+                        10 phút tới, và xu hướng nước.
+                    </div>
+                </div>
+                <form class="chat-input">
+                    <input type="text" placeholder="Hỏi về mực nước, dự báo, xu hướng..." />
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
+
+            <section class="water-status-panel">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; color: black;">💧 Mực Nước</h3>
+                    <button class="refresh-btn" id="refreshBtn">Cập nhật</button>
+                </div>
+
+                <div id="waterStatus">
+                    <div class="loading">⏳ Đang tải...</div>
+                </div>
+
+                <div style="font-size: 0.75rem; color: var(--neutral-light); margin-top: 1rem;">
+                    Cập nhật mỗi 5 giây
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Học Tập Online. Tất cả quyền được bảo lưu.</p>
+        </footer>
+
+        <script>
+            const form = document.querySelector(".chat-input");
+            const input = form.querySelector("input");
+            const messages = document.querySelector(".chat-messages");
+            const statusPanel = document.getElementById("waterStatus");
+            const refreshBtn = document.getElementById("refreshBtn");
+
+            // ========================================
+            // Fetch and display water status
+            // ========================================
+            async function updateWaterStatus() {
+                try {
+                    const response = await fetch("http://localhost:5000/api/water-status");
+                    const data = await response.json();
+
+                    let html = "";
+
+                    // Current water level
+                    if (data.sensor) {
+                        const waterLevel = data.sensor.waterLevel;
+                        let levelClass = "normal";
+                        if (waterLevel > 200) levelClass = "danger";
+                        else if (waterLevel > 150) levelClass = "warning";
+
+                        html += `
+                            <div class="status-item">
+                                <div class="status-label">Mực nước hiện tại</div>
+                                <div class="status-value ${levelClass}">${waterLevel.toFixed(
+                            1
+                        )} mm</div>
+                            </div>
+                        `;
+                    }
+
+                    // Forecast
+                    if (data.forecast) {
+                        const pred = data.forecast.pred_10min;
+                        html += `
+                            <div class="status-item">
+                                <div class="status-label">Dự báo +10 phút</div>
+                                <div class="status-value">${pred.toFixed(1)} mm</div>
+                            </div>
+                        `;
+                    }
+
+                    // History stats
+                    if (data.history) {
+                        html += `
+                            <div class="status-item">
+                                <div class="status-label">Min / Max</div>
+                                <div class="status-value">${data.history.min.toFixed(
+                            1
+                        )} / ${data.history.max.toFixed(1)} mm</div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-label">Trung bình</div>
+                                <div class="status-value">${data.history.avg.toFixed(
+                            1
+                        )} mm</div>
+                            </div>
+                        `;
+                    }
+
+                    statusPanel.innerHTML = html;
+                } catch (error) {
+                    statusPanel.innerHTML =
+                        '<div class="loading">❌ Lỗi tải dữ liệu: ' + error.message + '</div>';
+                }
+            }
+
+            // Update water status ONLY when user clicks refresh button
+            // Do NOT load on page load
+            
+            refreshBtn.addEventListener("click", () => {
+                console.log("User clicked refresh button");
+                updateWaterStatus();
+            });
+
+            // ========================================
+            // Chat functionality
+            // ========================================
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                if (!input.value.trim()) return;
+
+                // 1. Display user message
+                const userMsg = document.createElement("div");
+                userMsg.classList.add("message", "user-message");
+                userMsg.textContent = input.value;
+                messages.appendChild(userMsg);
+                messages.scrollTop = messages.scrollHeight;
+
+                // 2. Send to Flask backend
+                try {
+                    const response = await fetch("http://localhost:5000/chat", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ message: input.value }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+
+                    // 3. Display AI response
+                    const aiMsg = document.createElement("div");
+                    aiMsg.classList.add("message", "ai-message");
+                    if (data.reply) {
+                        aiMsg.textContent = data.reply;
+                    } else if (data.error) {
+                        aiMsg.textContent = "Lỗi: " + data.error;
+                    } else {
+                        aiMsg.textContent = "Lỗi: Không nhận được phản hồi từ AI.";
+                    }
+                    messages.appendChild(aiMsg);
+                    messages.scrollTop = messages.scrollHeight;
+                } catch (error) {
+                    const errorMsg = document.createElement("div");
+                    errorMsg.classList.add("message", "ai-message");
+                    errorMsg.textContent = "❌ Lỗi kết nối: " + error.message + " (Hãy chắc chắn Flask đang chạy trên http://localhost:5000)";
+                    messages.appendChild(errorMsg);
+                    messages.scrollTop = messages.scrollHeight;
+                    console.error("Chat error:", error);
+                }
+
+                input.value = "";
+            });
+        </script>
+    </body>
+</html>

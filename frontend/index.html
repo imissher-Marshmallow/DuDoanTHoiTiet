@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cảnh Báo Lũ Lụt</title>
+    <link rel="stylesheet" href="giaodien.css">
+    <style>
+        #vechungtoi {
+            font-size: 1.1em;
+        }
+        #vechungtoi h2, #vechungtoi h3 {
+            font-size: 1.5em;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .team-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none; /* Xóa gạch chân cho link */
+            color: inherit; /* Giữ màu chữ mặc định */
+        }
+        .team-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng hover */
+        }
+        .team-card a {
+            text-decoration: none; /* Đảm bảo không gạch chân */
+        }
+        .team-card h3, .team-card p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const authArea = document.getElementById("authArea");
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (currentUser) {
+            // Hiển thị avatar chữ cái đầu
+            const firstLetter = currentUser.name.charAt(0).toUpperCase();
+
+            authArea.innerHTML = `
+                <div class="user-avatar" title="${currentUser.name}">${firstLetter}</div>
+                <button class="logout">Đăng xuất</button>
+            `;
+
+            document.querySelector(".logout").addEventListener("click", () => {
+                localStorage.removeItem("currentUser");
+                location.reload();
+            });
+        }
+    });
+    </script>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">CẢNH BÁO LŨ LỤT</div>
+            <div class="nav-links">
+                <a href="#home">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#vechungtoi">Về Chúng Tôi</a>
+                <div class="dropdown">
+                    <span class="dropbtn">About⬇</span>
+                    <div class="dropdown-content">
+                        <a href="ai-assistant.html">Trợ lý AI</a>  
+                        <a href="ketnoiphancung.html">Kết nối phần cứng </a>
+                        <a href="lienhe.html">Giúp đỡ</a>
+                        <a href="lienhe.html">Báo lỗi</a>
+                    </div>
+                </div>
+
+                <a href="#ranking">Xếp hạng</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='login.html'">Đăng nhập</button>
+                <button class="register" onclick="window.location.href='register.html'">Đăng ký</button>
+                <button class="notification">Thông báo🔔</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Ứng Dụng cảnh báo lũ lụt</h1>
+        <p></p>
+    </section>
+
+    <section class="features" id="about">
+        <div class="feature-card">
+            <h3>Phát hiện bằng AI thông minh</h3>
+            <p>Sử dụng công nghệ AI tân tiến để phát hiện, dự báo mực nước</p>
+        </div>
+        <div class="feature-card">
+            <h3>Trợ lý Thông minh</h3>
+            <p>Đưa ra các giải pháp về cách ứng phó với thiên tai, lũ lụt</p>
+        </div>
+        <div class="feature-card">
+            <h3>Thông bao nhanh chóng</h3>
+            <p>Thông báo nhanh chóng cho người dùng những thông tin mới nhất</p>
+        </div>
+    </section>
+
+    <section class="about-us" id="vechungtoi">
+        <h2>Về Chúng Tôi</h2>
+        <p>Trang web được phát triển nhằm nâng cao nhận thức về phòng chống thiên tai.</p>
+        <p>Chúng tôi ứng dụng công nghệ AI tiên tiến để dự báo và cảnh báo sớm cho người dân.</p>
+        <div class="commitment-box">
+            <h3>Mục tiêu</h3>
+            <p>Giúp mọi người, đặc biệt là khu vực dễ ngập lụt, được cảnh báo sớm bằng công nghệ AI.</p>
+        </div>
+
+        <h3>Đội Ngũ Phát Triển</h3>
+        <div class="team-grid">
+            <a href="#caophuthinh" class="team-card">
+                <h3>Cao Phú Thịnh</h3> 
+                <p>thành viên 1</p>
+            </a>
+            <a href="#phamgiabao" class="team-card">
+                <h3>Phạm Gia Bảo</h3>
+                <p>thành viên 2</p>
+            </a>
+            <a href="#tuanminh" class="team-card">
+                <h3>Tuấn Minh</h3>
+                <p>thành viên 3</p>
+            </a>
+            <div class="team-card">
+                <h3>Thầy Ngô Thế Anh Hào</h3>
+                <p>Giáo viên hỗ trợ</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="caophuthinh" class="thanhvien-card">
+        <h3>Cao Phú Thịnh</h3>
+        <img src="" alt="">
+        <p>Phụ trách phần Back-end, Front-end, và tối ưu giao diện người dùng.</p>
+        <button class="back-btn" onclick="quayLai()">← Quay lại</button>
+    </section>
+
+    <section id="phamgiabao" class="thanhvien-card">
+        <h3>Phạm Gia Bảo</h3>
+        <p>Giao diện, Function.</p>
+        <button class="back-btn" onclick="quayLai()">← Quay lại</button>
+    </section>
+
+    <section id="tuanminh" class="thanhvien-card">
+        <h3>Tuấn Minh</h3>
+        <p>Phát triển AI, tối ưu mô hình và xây dựng giao diện hỗ trợ người dùng.</p>
+        <button class="back-btn" onclick="quayLai()">← Quay lại</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Học Tập Online. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const allMemberCards = document.querySelectorAll(".thanhvien-card");
+        allMemberCards.forEach(card => card.style.display = "none");
+        document.querySelectorAll(".team-card[href]").forEach(card => {
+            card.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = card.getAttribute("href").substring(1);
+                const target = document.getElementById(targetId);
+                document.querySelectorAll("section, footer").forEach(sec => {
+                    sec.style.display = "none";
+                });
+                target.style.display = "block";
+            });
+        });
+        const homeLink = document.querySelector('a[href="#home"]');
+        if (homeLink) {
+            homeLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                quayLai(); // Gọi hàm quayLai()
+                // Cuộn lên đầu trang cho đẹp
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+    });
+// cho terminal di nigger
+    // Hàm quay lại (hiện lại mọi thứ, ẩn thẻ thành viên)
+    function quayLai() {
+        document.querySelectorAll("section, footer").forEach(sec => {
+            sec.style.display = "";
+        });
+        document.querySelectorAll(".thanhvien-card").forEach(c => c.style.display = "none");
+    }
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hệ thống cảnh báo ngập - Bảng điều khiển</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Firebase CDN (Realtime Database) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <style>
+      :root {
+        --primary-color: #add8e6;
+        --secondary-color: #add8e6;
+        --accent-color: #ffd700;
+        --neutral-light: #f5f5f5;
+        --neutral-dark: #333;
+        --text-color: black;
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+        --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        transition: all 0.3s ease;
+      }
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: black;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--glass-border);
+        color: black;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: var(--shadow);
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: black;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px var(--accent-color);
+        }
+        to {
+          text-shadow:
+            0 0 20px var(--accent-color),
+            0 0 30px var(--accent-color);
+        }
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+      .nav-links a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 50%;
+        background: var(--accent-color);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+      .nav-links a:hover {
+        color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .hero {
+        text-align: center;
+        padding: 2.5rem 1rem;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.85)
+        );
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero h1 {
+        font-size: 2rem;
+        color: black;
+        margin-bottom: 0.5rem;
+      }
+      .hero p {
+        color: var(--text-color);
+        font-size: 1rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 1.5rem;
+        align-items: start;
+      }
+      .panel,
+      .card {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        padding: 1rem;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+      .status-row {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      .stat {
+        background: white;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        min-width: 140px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+      .stat h4 {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.4rem;
+      }
+      .stat p {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--neutral-dark);
+      }
+      canvas {
+        width: 100% !important;
+        height: 300px !important;
+      }
+      .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      label {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        color: #222;
+      }
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 0.6rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        outline: none;
+        background: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+      }
+      .btn {
+        padding: 0.7rem 1rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        background: linear-gradient(45deg, var(--accent-color), #ffb347);
+        color: #000;
+        box-shadow: var(--shadow);
+      }
+      .btn.secondary {
+        background: var(--neutral-light);
+        color: var(--neutral-dark);
+      }
+      .alert {
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        background: rgba(255, 215, 0, 0.12);
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+      }
+      footer {
+        margin-top: 2rem;
+        text-align: center;
+        padding: 1.5rem 0;
+        color: #222;
+      }
+      @media (max-width: 980px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container" aria-label="top navigation">
+        <div class="logo">FloodSense</div>
+        <div class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="#">Giám sát</a>
+          <a href="#">Cấu hình</a>
+          <a href="#">Hướng dẫn</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Hệ thống cảnh báo ngập lụt</h1>
+        <p>
+          Giám sát mực nước thời gian thực — Kết nối phần cứng (ESP32 + HC-SR04)
+          — Cấu hình & gửi lệnh nhanh
+        </p>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="status-row">
+            <div class="stat">
+              <h4>Khoảng cách (cm)</h4>
+              <p id="distance">--</p>
+            </div>
+            <div class="stat">
+              <h4>Mực nước (cm)</h4>
+              <p id="waterLevel">--</p>
+            </div>
+            <div class="stat">
+              <h4>Trạng thái</h4>
+              <p id="status">Chưa kết nối</p>
+            </div>
+          </div>
+          <div style="margin-bottom: 0.75rem">
+            <small>Thời gian cập nhật: <span id="timestamp">--</span></small>
+          </div>
+          <div style="background: white; padding: 0.5rem; border-radius: 10px">
+            <canvas id="chart"></canvas>
+          </div>
+          <div
+            style="
+              margin-top: 1rem;
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+            "
+          >
+            <button class="btn" id="btnManualMeasure">Yêu cầu đo ngay</button>
+            <button class="btn secondary" id="btnClearData">
+              Xóa biểu đồ (phiên)
+            </button>
+          </div>
+        </div>
+
+        <aside class="controls">
+          <div class="card">
+            <h3>Cấu hình cảm biến (sensor1)</h3>
+            <label for="sensorHeight">Chiều cao từ cảm biến đến đáy (cm)</label>
+            <input type="number" id="sensorHeight" value="50" min="1" />
+            <label for="updateInterval">Chu kì cập nhật mong muốn (giây)</label>
+            <input type="number" id="updateInterval" value="5" min="1" />
+            <label for="alertThreshold">Ngưỡng cảnh báo mực nước (cm)</label>
+            <input type="number" id="alertThreshold" value="30" min="1" />
+            <div style="display: flex; gap: 0.6rem; margin-top: 0.5rem">
+              <button class="btn" id="btnSaveConfig">Lưu cấu hình</button>
+              <button class="btn secondary" id="btnFetchConfig">
+                Tải cấu hình
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Ghi chú & trạng thái kết nối</h3>
+            <p style="font-size: 0.95rem; color: #333">
+              Kết nối: <strong id="connState">Chưa kết nối</strong>
+            </p>
+            <div id="alerts"></div>
+          </div>
+
+          <div class="card">
+            <h3>Thông tin kỹ thuật</h3>
+            <p style="font-size: 0.9rem; color: #333">
+              ESP32 cần ghi dữ liệu lên đường dẫn:
+              <code>/water_level/sensor1</code><br />
+              Dữ liệu mẫu (JSON):
+              <code>{ distance: 45.2, waterLevel: 4.8, timestamp: 169xxx }</code
+              ><br />
+              Đọc cấu hình: <code>/config/sensor1</code><br />
+              Lệnh điều khiển: <code>/commands/sensor1</code>
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        © Nhóm nghiên cứu — Hệ thống cảnh báo ngập lụt thông minh
+      </footer>
+    </main>
+
+    <script>
+      /******** Configuration & Initialization ********/
+      const API_BASE = 'http://localhost:5000';
+      const ALERT_THRESHOLD = 200; // mm - threshold for danger alert
+
+      // ========================================
+      // UI Elements Reference
+      // ========================================
+      const distanceEl = document.getElementById("distance");
+      const waterEl = document.getElementById("waterLevel");
+      const statusEl = document.getElementById("status");
+      const tsEl = document.getElementById("timestamp");
+      const connStateEl = document.getElementById("connState");
+      const alertsEl = document.getElementById("alerts");
+
+      const sensorHeightInput = document.getElementById("sensorHeight");
+      const updateIntervalInput = document.getElementById("updateInterval");
+      const alertThresholdInput = document.getElementById("alertThreshold");
+
+      const btnManual = document.getElementById("btnManualMeasure");
+      const btnSaveConfig = document.getElementById("btnSaveConfig");
+      const btnFetchConfig = document.getElementById("btnFetchConfig");
+      const btnClearData = document.getElementById("btnClearData");
+
+      /******** Chart.js Setup ********/
+      const ctx = document.getElementById("chart").getContext("2d");
+      const chartData = {
+        labels: [],
+        datasets: [
+          {
+            label: "Mực nước (cm)",
+            data: [],
+            tension: 0.3,
+            fill: true,
+            backgroundColor: "rgba(255,215,0,0.12)",
+            borderColor: "rgba(255,215,0,0.8)",
+          },
+        ],
+      };
+      const chart = new Chart(ctx, {
+        type: "line",
+        data: chartData,
+        options: {
+          responsive: true,
+          scales: {
+            x: { display: true, title: { display: true, text: "Thời gian" } },
+            y: { display: true, title: { display: true, text: "cm" } },
+          },
+        },
+      });
+
+      function pushToChart(timeLabel, value) {
+        chartData.labels.push(timeLabel);
+        chartData.datasets[0].data.push(value);
+        if (chartData.labels.length > 60) {
+          chartData.labels.shift();
+          chartData.datasets[0].data.shift();
+        }
+        chart.update();
+      }
+
+      // ========================================
+      // API Integration - Fetch Water Data from Backend
+      // ========================================
+      async function fetchWaterStatus() {
+        try {
+          connStateEl.textContent = "Đang kết nối...";
+          const response = await fetch(`${API_BASE}/api/water-status`);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          
+          const data = await response.json();
+          
+          if (data.status === 'success' && data.sensor) {
+            const sensor = data.sensor;
+            
+            // Check if Arduino is actually connected by verifying sensor has valid data
+            if (sensor.distance !== null && sensor.distance !== undefined && sensor.waterLevel !== null && sensor.waterLevel !== undefined) {
+              connStateEl.textContent = "✓ Arduino: Kết nối";
+              statusEl.textContent = "Hoạt động";
+            } else {
+              connStateEl.textContent = "❌ Arduino: Mất kết nối";
+              statusEl.textContent = "Chưa có dữ liệu";
+            }
+            
+            distanceEl.textContent = sensor.distance?.toFixed(2) ?? "--";
+            waterEl.textContent = sensor.waterLevel?.toFixed(2) ?? "--";
+            
+            // Fix timezone issue: timestamp is milliseconds, parse as number
+            const ts = sensor.timestamp ? new Date(parseInt(sensor.timestamp)) : new Date();
+            tsEl.textContent = ts.toLocaleString('vi-VN');
+            
+            if (sensor.waterLevel !== undefined) {
+              pushToChart(ts.toLocaleTimeString('vi-VN'), Number(sensor.waterLevel));
+            }
+            
+            // Check alert threshold
+            const threshold = Number(alertThresholdInput.value) || ALERT_THRESHOLD;
+            if (sensor.waterLevel >= threshold) {
+              showAlert(
+                ` CẢNH BÁO! Mực nước vượt ngưỡng: ${sensor.waterLevel.toFixed(1)} cm ≥ ${threshold} cm`,
+                0,
+                'danger'
+              );
+            } else if (sensor.waterLevel >= threshold * 0.75) {
+              showAlert(
+                ` CHÚ Ý: Mực nước cao: ${sensor.waterLevel.toFixed(1)} cm (Ngưỡng: ${threshold} cm)`,
+                5000,
+                'warning'
+              );
+            } else {
+              clearAlert();
+            }
+          } else {
+            connStateEl.textContent = " Không có dữ liệu";
+            statusEl.textContent = "Chưa cập nhật";
+          }
+        } catch (error) {
+          console.error('Water fetch error:', error);
+          connStateEl.textContent = ` Lỗi: ${error.message}`;
+          statusEl.textContent = "Lỗi kết nối";
+          showAlert(`Lỗi kết nối backend: ${error.message}`, 5000, 'danger');
+        }
+      }
+
+      // ========================================
+      // Configuration Management
+      // ========================================
+      async function fetchConfig() {
+        try {
+          const response = await fetch(`${API_BASE}/api/config`);
+          const data = await response.json();
+          
+          if (data.status === 'success' && data.config) {
+            const cfg = data.config;
+            if (cfg.sensorHeight) sensorHeightInput.value = cfg.sensorHeight;
+            if (cfg.updateInterval) updateIntervalInput.value = cfg.updateInterval;
+            if (cfg.alertThreshold) alertThresholdInput.value = cfg.alertThreshold;
+            
+            showAlert(" Đã tải cấu hình từ server", 3000, "info");
+          } else {
+            showAlert(" Chưa có cấu hình lưu sẵn", 3000, "warning");
+          }
+        } catch (error) {
+          console.error('Config fetch error:', error);
+          showAlert(`Lỗi tải cấu hình: ${error.message}`, 3000, "danger");
+        }
+      }
+
+      async function saveConfig() {
+        try {
+          const cfg = {
+            sensorHeight: Number(sensorHeightInput.value),
+            updateInterval: Number(updateIntervalInput.value),
+            alertThreshold: Number(alertThresholdInput.value),
+            updatedAt: Date.now(),
+          };
+          
+          const response = await fetch(`${API_BASE}/api/config`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(cfg)
+          });
+          
+          if (response.ok) {
+            showAlert("✓ Cấu hình đã lưu thành công", 2500, "success");
+          } else {
+            showAlert("Lỗi lưu cấu hình", 3000, "danger");
+          }
+        } catch (error) {
+          console.error('Config save error:', error);
+          showAlert(`Lỗi lưu cấu hình: ${error.message}`, 3000, "danger");
+        }
+      }
+
+      // ========================================
+      // Command Sending
+      // ========================================
+      async function sendCommand(command) {
+        try {
+          const response = await fetch(`${API_BASE}/api/command`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ command })
+          });
+          
+          const data = await response.json();
+          if (response.ok) {
+            showAlert(` Lệnh "${command}" đã gửi`, 2000, "info");
+          } else {
+            showAlert(` Lỗi gửi lệnh: ${data.error}`, 2500, "danger");
+          }
+        } catch (error) {
+          console.error('Command send error:', error);
+          showAlert(`Lỗi gửi lệnh: ${error.message}`, 3000, "danger");
+        }
+      }
+
+      // ========================================
+      // Alert Management
+      // ========================================
+      let alertTimeout = null;
+      function showAlert(text, timeout = 0, type = "warning") {
+        alertsEl.innerHTML = "";
+        const div = document.createElement("div");
+        div.className = "alert";
+        
+        // Color coding based on type
+        let bgColor = "rgba(255, 215, 0, 0.12)"; // warning yellow
+        if (type === 'danger') {
+          bgColor = "rgba(255, 100, 100, 0.15)"; // danger red
+        } else if (type === 'success') {
+          bgColor = "rgba(100, 200, 100, 0.15)"; // success green
+        } else if (type === 'info') {
+          bgColor = "rgba(100, 150, 255, 0.15)"; // info blue
+        }
+        
+        div.style.background = bgColor;
+        div.textContent = text;
+        alertsEl.appendChild(div);
+        
+        if (alertTimeout) clearTimeout(alertTimeout);
+        if (timeout > 0) {
+          alertTimeout = setTimeout(() => {
+            alertsEl.innerHTML = "";
+          }, timeout);
+        }
+      }
+
+      function clearAlert() {
+        alertsEl.innerHTML = "";
+      }
+
+      // ========================================
+      // Event Listeners
+      // ========================================
+      btnManual.addEventListener("click", () => {
+        sendCommand("measure");
+      });
+
+      btnSaveConfig.addEventListener("click", saveConfig);
+      btnFetchConfig.addEventListener("click", fetchConfig);
+
+      btnClearData.addEventListener("click", () => {
+        chartData.labels = [];
+        chartData.datasets[0].data = [];
+        chart.update();
+        showAlert(" Biểu đồ đã xóa", 2000, "info");
+      });
+
+      // ========================================
+      // Initialization
+      // ========================================
+      console.log(" FloodSense Dashboard tải xong");
+      console.log(` Backend URL: ${API_BASE}`);
+      
+      // Fetch config and initial water status
+      fetchConfig();
+      fetchWaterStatus();
+      
+      // Check backend connection status
+      fetch(`${API_BASE}/api/water-status`).then(() => {
+        connStateEl.textContent = " Backend: Sẵn sàng chạy siu";
+      }).catch(() => {
+        connStateEl.textContent = " Không kết nối được Backend";
+        showAlert("Không thể kết nối Backend, chạy flask chưa em", 0, "danger");
+      });
+    </script>
+  </body>
+</html>

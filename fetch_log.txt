@@ -1,0 +1,339 @@
+[2025-11-19T11:05:21.614214] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:21.627324] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:21.628327] History now has 412 records
+[2025-11-19T11:05:29.457114] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:29.466655] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:29.467651] History now has 414 records
+[2025-11-19T11:05:35.234461] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:35.241483] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:35.242461] History now has 2 records
+[2025-11-19T11:05:40.984820] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:40.991822] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:05:40.993328] History now has 4 records
+[2025-11-19T11:08:11.701692] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:11.716503] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:11.716503] History now has 7 records
+[2025-11-19T11:08:17.782409] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:17.793602] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:17.794112] History now has 9 records
+[2025-11-19T11:08:23.984766] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:24.001365] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:24.003373] History now has 11 records
+[2025-11-19T11:08:30.431237] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:30.459598] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:30.470660] History now has 12 records
+[2025-11-19T11:08:36.730890] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:36.745960] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:36.747478] History now has 14 records
+[2025-11-19T11:08:43.578015] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:43.594078] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:43.597121] History now has 16 records
+[2025-11-19T11:08:49.923626] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:49.940764] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:49.941747] History now has 17 records
+[2025-11-19T11:08:56.290822] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:56.311334] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:08:56.312346] History now has 19 records
+[2025-11-19T11:09:02.213410] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:02.220418] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:02.221419] History now has 21 records
+[2025-11-19T11:09:08.048010] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:08.065639] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:08.072189] History now has 22 records
+[2025-11-19T11:09:13.886527] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:13.894135] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:13.894135] History now has 24 records
+[2025-11-19T11:09:19.760916] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:19.767430] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:19.768453] History now has 26 records
+[2025-11-19T11:09:25.619054] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:25.627586] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:25.628582] History now has 27 records
+[2025-11-19T11:09:31.435728] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:31.442257] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:31.443767] History now has 29 records
+[2025-11-19T11:09:37.151891] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:37.156412] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:37.157411] History now has 31 records
+[2025-11-19T11:09:42.932063] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:42.937579] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:42.937579] History now has 33 records
+[2025-11-19T11:09:49.016103] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:49.030148] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:49.031160] History now has 34 records
+[2025-11-19T11:09:55.279790] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:55.295498] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:09:55.296522] History now has 36 records
+[2025-11-19T11:10:01.503474] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:01.513512] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:01.513512] History now has 38 records
+[2025-11-19T11:10:07.644676] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:07.671219] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:07.672177] History now has 39 records
+[2025-11-19T11:10:13.854820] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:13.873536] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:13.876095] History now has 41 records
+[2025-11-19T11:10:20.334169] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:20.352255] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:20.353776] History now has 43 records
+[2025-11-19T11:10:26.788255] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:26.805503] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:26.806492] History now has 44 records
+[2025-11-19T11:10:33.238698] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:33.250162] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:33.251157] History now has 46 records
+[2025-11-19T11:10:39.698440] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:39.714910] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:39.716912] History now has 48 records
+[2025-11-19T11:10:45.454742] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:45.471416] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:45.475950] History now has 50 records
+[2025-11-19T11:10:51.318855] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:51.326379] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:51.327384] History now has 51 records
+[2025-11-19T11:10:57.544710] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:57.561487] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:10:57.562483] History now has 53 records
+[2025-11-19T11:11:03.384629] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:03.400697] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:03.401704] History now has 55 records
+[2025-11-19T11:11:10.017230] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:10.028749] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:10.029749] History now has 56 records
+[2025-11-19T11:11:15.908225] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:15.924145] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:15.926702] History now has 58 records
+[2025-11-19T11:11:22.101321] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:22.114897] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:22.116916] History now has 60 records
+[2025-11-19T11:11:28.305928] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:28.322327] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:28.323909] History now has 61 records
+[2025-11-19T11:11:34.191548] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:34.197115] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:34.197115] History now has 63 records
+[2025-11-19T11:11:39.980081] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:39.984653] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:39.985654] History now has 64 records
+[2025-11-19T11:11:45.748289] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:45.756246] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:45.756795] History now has 66 records
+[2025-11-19T11:11:51.627547] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:51.634598] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:51.635595] History now has 68 records
+[2025-11-19T11:11:58.216499] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:58.232735] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:11:58.234269] History now has 70 records
+[2025-11-19T11:12:04.460639] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:04.474689] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:04.476686] History now has 71 records
+[2025-11-19T11:12:10.788699] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:10.803963] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:10.806345] History now has 73 records
+[2025-11-19T11:12:16.705798] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:16.712320] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:16.712320] History now has 75 records
+[2025-11-19T11:12:22.485839] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:22.492368] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:22.492368] History now has 76 records
+[2025-11-19T11:12:28.240897] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:28.247114] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:28.247114] History now has 78 records
+[2025-11-19T11:12:34.019765] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:34.029384] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:34.029384] History now has 80 records
+[2025-11-19T11:12:39.923719] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:39.931237] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:39.932232] History now has 82 records
+[2025-11-19T11:12:46.017416] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:46.030951] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:46.031942] History now has 83 records
+[2025-11-19T11:12:52.564752] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:52.573761] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:52.574304] History now has 85 records
+[2025-11-19T11:12:58.596576] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:58.604112] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:12:58.605106] History now has 87 records
+[2025-11-19T11:13:04.750425] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:04.764524] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:04.766506] History now has 88 records
+[2025-11-19T11:13:10.764898] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:10.769903] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:10.770898] History now has 90 records
+[2025-11-19T11:13:16.504812] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:16.510811] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:16.510811] History now has 92 records
+[2025-11-19T11:13:22.249206] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:22.255725] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:22.255725] History now has 94 records
+[2025-11-19T11:13:28.231018] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:28.237561] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:28.238561] History now has 95 records
+[2025-11-19T11:13:34.231199] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:34.236735] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:34.238733] History now has 97 records
+[2025-11-19T11:13:39.949579] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:39.955274] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:39.955274] History now has 99 records
+[2025-11-19T11:13:45.693884] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:45.699288] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:45.699288] History now has 101 records
+[2025-11-19T11:13:51.451830] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:51.458374] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:51.459887] History now has 102 records
+[2025-11-19T11:13:57.212886] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:57.219387] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:13:57.219387] History now has 104 records
+[2025-11-19T11:14:02.991973] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:02.998510] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:02.998510] History now has 106 records
+[2025-11-19T11:14:09.485055] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:09.498519] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:09.498519] History now has 108 records
+[2025-11-19T11:14:15.719518] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:15.730459] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:15.731478] History now has 109 records
+[2025-11-19T11:14:21.906100] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:21.921289] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:21.922272] History now has 111 records
+[2025-11-19T11:14:28.206802] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:28.216362] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:28.216362] History now has 113 records
+[2025-11-19T11:14:34.686850] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:34.698900] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:34.699906] History now has 114 records
+[2025-11-19T11:14:41.964634] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:41.983899] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:41.985922] History now has 116 records
+[2025-11-19T11:14:48.285112] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:48.304186] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:48.318767] History now has 118 records
+[2025-11-19T11:14:54.128065] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:54.136594] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:14:54.136594] History now has 119 records
+[2025-11-19T11:15:00.404907] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:00.421459] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:00.422456] History now has 121 records
+[2025-11-19T11:15:06.389376] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:06.400914] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:06.401913] History now has 123 records
+[2025-11-19T11:15:12.563667] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:12.571303] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:12.572301] History now has 124 records
+[2025-11-19T11:15:18.807032] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:18.821577] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:18.827114] History now has 126 records
+[2025-11-19T11:15:24.937370] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:24.945404] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:24.945404] History now has 128 records
+[2025-11-19T11:15:31.113934] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:31.122014] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:31.123016] History now has 129 records
+[2025-11-19T11:15:36.982025] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:36.992649] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:36.992649] History now has 131 records
+[2025-11-19T11:15:42.818740] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:42.826491] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:42.827490] History now has 133 records
+[2025-11-19T11:15:48.674077] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:48.679598] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:48.681114] History now has 135 records
+[2025-11-19T11:15:54.518879] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:54.525912] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:15:54.526924] History now has 136 records
+[2025-11-19T11:16:00.331859] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:00.339891] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:00.339891] History now has 138 records
+[2025-11-19T11:16:06.132093] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:06.141862] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:06.142865] History now has 140 records
+[2025-11-19T11:16:12.312820] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:12.321335] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:12.322335] History now has 142 records
+[2025-11-19T11:16:18.270555] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:18.279096] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:16:18.280084] History now has 143 records
+[2025-11-19T11:20:56.603122] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD0B290>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T11:20:56.605552] No record to append
+[2025-11-19T11:20:56.607832] No history updated
+[2025-11-19T11:21:13.667848] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD0AA20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T11:21:13.668863] No record to append
+[2025-11-19T11:21:13.683318] No history updated
+[2025-11-19T11:21:20.218495] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:20.251865] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:20.252863] History now has 145 records
+[2025-11-19T11:21:26.546419] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:26.555130] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:26.555130] History now has 146 records
+[2025-11-19T11:21:32.669121] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:32.675122] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:32.676629] History now has 148 records
+[2025-11-19T11:21:38.718018] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:38.725018] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:38.726525] History now has 150 records
+[2025-11-19T11:21:44.770290] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:44.778850] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:44.778850] History now has 151 records
+[2025-11-19T11:21:51.258569] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:51.272162] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:51.273182] History now has 153 records
+[2025-11-19T11:21:58.050429] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:58.066485] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:21:58.068541] History now has 155 records
+[2025-11-19T11:22:04.669919] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:22:04.684547] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:22:04.685551] History now has 156 records
+[2025-11-19T11:26:38.978885] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD0A7B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T11:26:38.991411] No record to append
+[2025-11-19T11:26:39.003409] No history updated
+[2025-11-19T11:26:45.285275] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:45.306241] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:45.311243] History now has 159 records
+[2025-11-19T11:26:51.541831] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:51.555912] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:51.557869] History now has 160 records
+[2025-11-19T11:26:57.543127] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:57.549992] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:26:57.549992] History now has 162 records
+[2025-11-19T11:27:03.333455] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:03.338978] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:03.339978] History now has 163 records
+[2025-11-19T11:27:09.284337] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:09.305529] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:09.307987] History now has 165 records
+[2025-11-19T11:27:15.250882] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:15.261881] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:15.262882] History now has 167 records
+[2025-11-19T11:27:21.185138] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:21.195468] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:21.195468] History now has 168 records
+[2025-11-19T11:27:26.932960] Fetched from Firebase: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:26.948630] Appended to history.csv: {'distance': 13.45, 'timestamp': 2300360, 'waterLevel': 36.55}
+[2025-11-19T11:27:26.948630] History now has 170 records
+[2025-11-19T12:28:46.550158] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD4FE90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T12:28:46.688567] No record to append
+[2025-11-19T12:28:46.848873] No history updated
+[2025-11-19T13:31:30.522614] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD09A00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T13:31:30.532888] No record to append
+[2025-11-19T13:31:30.543798] No history updated
+[2025-11-19T13:31:48.217078] Fetch exception: HTTPSConnectionPool(host='edfwef-default-rtdb.firebaseio.com', port=443): Max retries exceeded with url: /water_level/sensor1.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001910DD093A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-11-19T13:31:48.228905] No record to append
+[2025-11-19T13:31:48.235156] No history updated
+[2025-11-19T13:31:55.472974] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:31:55.496017] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:31:55.499159] History now has 171 records
+[2025-11-19T13:32:02.193105] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:02.208750] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:02.209850] History now has 173 records
+[2025-11-19T13:32:08.920055] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:08.937250] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:08.938160] History now has 175 records
+[2025-11-19T13:32:15.297795] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:15.317344] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:15.320093] History now has 176 records
+[2025-11-19T13:32:21.606422] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:21.619191] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:21.619191] History now has 178 records
+[2025-11-19T13:32:27.568283] Fetched from Firebase: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:27.580465] Appended to history.csv: {'distance': 63.99, 'timestamp': 84109, 'waterLevel': 0.0}
+[2025-11-19T13:32:27.580465] History now has 180 records

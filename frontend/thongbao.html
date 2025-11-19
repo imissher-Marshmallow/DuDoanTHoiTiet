@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Monitor</title>
+</head>
+<body>
+    <h1>Water Level Monitor</h1>
+    <div>
+        <p>Water Level: <span id="water-level">Loading...</span> cm</p>
+        <p>Temperature: <span id="temperature">Loading...</span> °C</p>
+    </div>
+
+    <script>
+        function fetchSensorData() {
+            fetch('/api/sensor')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('water-level').textContent = data.water_level;
+                    document.getElementById('temperature').textContent = data.temperature;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        setInterval(fetchSensorData, 5000);  // Update every 5 seconds
+        fetchSensorData();  // Initial fetch
+    </script>
+</body>
+</html>
